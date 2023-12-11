@@ -29,7 +29,16 @@ access(all) contract SomeContract {
         pub fun structFunc() {
             /**************/
             /*** AREA 1 ***/
-            /**************/
+            /*
+            Variables
+            a (pub(set)): Readable and writable.
+            b (pub): Readable, not writable.
+            c (access(contract)): Readable, not writable.
+            d (access(self)): Readable and writable.
+            Functions
+            publicFunc: Callable.
+            contractFunc: Callable.
+            privateFunc: Callable.*/
         }
 
         init() {
@@ -46,7 +55,16 @@ access(all) contract SomeContract {
         pub fun resourceFunc() {
             /**************/
             /*** AREA 2 ***/
-            /**************/
+            /*
+            Variables
+            a (pub(set)): Readable, not writable.
+            b (pub): Readable, not writable.
+            c (access(contract)): Readable, not writable.
+            d (access(self)): Not accessible.
+            Functions
+            publicFunc: Callable.
+            contractFunc: Not callable.
+            privateFunc: Not callable.*/
         }
 
         init() {
@@ -61,7 +79,17 @@ access(all) contract SomeContract {
     pub fun questsAreFun() {
         /**************/
         /*** AREA 3 ****/
-        /**************/
+        /*
+        Variables
+        a (pub(set)): Readable, not writable.
+        b (pub): Readable, not writable.
+        c (access(contract)): Readable, not writable.
+        d (access(self)): Not accessible.
+        Functions
+        publicFunc: Callable.
+        contractFunc: Not callable.
+        privateFunc: Not callable.
+        */
     }
 
     init() {
